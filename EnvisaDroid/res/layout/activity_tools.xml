@@ -12,6 +12,7 @@
         android:gravity="center_vertical|center_horizontal" >
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/syncButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
             android:text="@string/sync" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/settingsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,6 +30,7 @@
             android:text="@string/settings" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/timeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,6 +39,7 @@
             android:text="@string/time" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/logButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,6 +55,7 @@
         android:gravity="center_vertical|center_horizontal" >
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/chimeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,14 +64,16 @@
             android:text="@string/chime_toggle" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
             android:drawableTop="@drawable/action_help"
-            android:text="@string/blank" />
+            android:text="@string/help" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/timersButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,6 +82,7 @@
             android:text="@string/timers" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/reportButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,45 +98,7 @@
         android:gravity="center_vertical|center_horizontal" >
 
         <Button
-            android:id="@+id/button17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:drawableTop="@drawable/action_help"
-            android:text="@string/blank" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:drawableTop="@drawable/action_help"
-            android:text="@string/blank" />
-
-        <Button
-            android:id="@+id/button19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:drawableTop="@drawable/action_help"
-            android:text="@string/blank" />
-
-        <Button
-            android:id="@+id/rebootButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:drawableTop="@drawable/action_reboot"
-            android:text="@string/reboot" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical|center_horizontal" >
-
-        <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/armToolButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,6 +107,7 @@
             android:text="@string/arm" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/stayToolButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,6 +116,7 @@
             android:text="@string/armStay" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/disarmToolButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,12 +125,13 @@
             android:text="@string/disarm" />
 
         <Button
-            android:id="@+id/button16"
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/rebootButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
-            android:drawableTop="@drawable/action_help"
-            android:text="@string/blank" />
+            android:drawableTop="@drawable/action_reboot"
+            android:text="@string/reboot" />
     </LinearLayout>
 
 </LinearLayout>

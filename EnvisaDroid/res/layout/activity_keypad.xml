@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent" >
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <Button
@@ -25,8 +26,9 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <Button
@@ -46,8 +48,9 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <Button
@@ -67,8 +70,9 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <Button
@@ -83,13 +87,14 @@
 
         <Button
             style="?android:attr/buttonBarButtonStyle"
-            android:onClick="has"
+            android:onClick="hash"
             android:text="@string/hash" />
     </TableRow>
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <Button
@@ -108,16 +113,19 @@
     </TableRow>
 
     <TableRow
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:focusable="false"
         android:gravity="center" >
 
         <TextView
             android:id="@+id/commandString"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5687#"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace" />
+
     </TableRow>
 
 </TableLayout>
