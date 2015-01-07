@@ -83,20 +83,12 @@ public class EnvisadroidApplication extends Application implements TPIListener, 
 
 		if (Util.getBoolPreference(this, SettingsActivity.AUTOCONNECT)) {
 			try {
-				Log.d(LOG, ">>>>>>>>>>>>>>>>>autoconnecting<<<<<<<<<<<<<<<<<<<<");
-				Log.d(LOG, ">>>>>>>>>>>>>>>>>autoconnecting<<<<<<<<<<<<<<<<<<<<");
-				Log.d(LOG, ">>>>>>>>>>>>>>>>>autoconnecting<<<<<<<<<<<<<<<<<<<<");
 				connect();
 			} 
 			catch (Throwable e) {
 				LogActivity.log(this, e.getMessage());
 				e.printStackTrace();
 			}
-		}
-		else {
-			Log.d(LOG, ">>>>>>>>>>>>>>>>>not autoconnecting<<<<<<<<<<<<<<<<<<<<");
-			Log.d(LOG, ">>>>>>>>>>>>>>>>>not autoconnecting<<<<<<<<<<<<<<<<<<<<");
-			Log.d(LOG, ">>>>>>>>>>>>>>>>>not autoconnecting<<<<<<<<<<<<<<<<<<<<");
 		}
 	}
 
