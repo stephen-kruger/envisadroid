@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="3dip"
+    android:background="@color/gradient_end"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/zoneevent_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zones"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/gradient_start"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zoneevent_partitionText"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp"
+            android:textColor="@color/gradient_center" />
+
+        <TextView
+            android:id="@+id/zoneevent_zonepartition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dip"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp"
+            android:textColor="#343434" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dip"
+            android:text="@string/zoneevent_zoneText"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp"
+            android:textColor="@color/gradient_center" />
+
+        <TextView
+            android:id="@+id/zoneevent_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dip"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp"
+            android:textColor="#343434" />
+        
+        <TextView
+            android:id="@+id/zoneevent_eventdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="4dip"
+            android:text="10:10 10/10/2013"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="10sp"
+            android:gravity="right"
+            android:textColor="#343434" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:contentDescription="@string/zones"
+            android:src="@drawable/device_access_time" />
+
+        <TextView
+            android:id="@+id/zoneevent_zonedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="1dip"
+            android:text="Closed 3 minutes ago"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="10sp"
+            android:textColor="#343434" />
+
+        
+    </LinearLayout>
+
+</LinearLayout>

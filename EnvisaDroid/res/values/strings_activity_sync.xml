@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="title_activity_sync_edit">Sync zone names</string>
+
+    <string name="sync_send">Send</string>
+    <string name="sync_receive">Receive</string>
+    <string name="sync_help">Synchronise your zone name definitions between devices running on this network</string>
+    <string name="really_send">Set this devices zone definitions for retrieval by your other devices?</string>
+    <string name="really_receive">Receive zone definitions from your primary device? This will overwrite the names on this device</string>
+    
+</resources>

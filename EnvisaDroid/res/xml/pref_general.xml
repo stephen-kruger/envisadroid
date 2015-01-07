@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:defaultValue="TPI"
+        android:entries="@array/panel"
+        android:entryValues="@array/panel_values"
+        android:key="panelPref"
+        android:summary="@string/pref_panel_summary"
+        android:title="@string/pref_panel_title" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_hostname"
+        android:inputType="textCapWords"
+        android:key="hostname"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_summary_hostname"
+        android:title="@string/pref_title_hostname" />
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_port"
+        android:inputType="textCapWords"
+        android:key="port"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:numeric="integer"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_summary_port"
+        android:title="@string/pref_title_port" />
+
+</PreferenceScreen>
