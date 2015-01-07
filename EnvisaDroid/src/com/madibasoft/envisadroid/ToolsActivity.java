@@ -152,7 +152,7 @@ public class ToolsActivity extends Activity implements TPIListener {
 			public void onClick(View vw) {
 				try {
 					((EnvisadroidApplication)getApplication()).getSession().toggleChime(1);
-					dialog(ToolsActivity.this,R.string.success,R.string.chime_toggle);
+					dialog(ToolsActivity.this,R.string.success,R.string.chime_toggle_clicked);
 				} 
 				catch (Throwable e) {
 					dialog(ToolsActivity.this,R.string.error,e.getMessage());

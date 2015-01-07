@@ -44,8 +44,9 @@ public class Command {
 	public static final int PARTITION_READY = 650;
 	public static final int PARTITION_NOT_READY = 651;
 	public static final int PARTITION_ARMED = 652;
-	public static final int PARTITION_DISARMED = 655;
+	public static final int PARTITION_ARMED_FORCE_ARM_ENABLED = 653;
 	public static final int PARTITION_ALARM = 654;
+	public static final int PARTITION_DISARMED = 655;
 	public static final int EXIT_DELAY_IN_PROGRESS = 656;
 	public static final int PARTITION_FAILED_TO_ARM = 659;
 	public static final int CHIME_ENABLED = 663;
