@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="title_activity_zone_edit">Edit Zone</string>
+    <string name="prompt_zone">Zone 1</string>
+    <string name="action_save">Save</string>
+    <string name="bypass">Bypass</string>
+    <string name="time">Set</string>
+    <string name="settings">Pref</string>
+    <string name="blank"></string>
+    <string name="sync_title">Zone sync</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="armStay">Stay</string>
+    <string name="sync">Sync</string>
+    <string name="chime_toggle">Chime</string>
+    <string name="report">Report</string>
+    <string name="timers">Timers</string>
+    <string name="reboot">Reboot</string>
+    <string name="success">Success</string>
+    <string name="error">Error</string>
+    <string name="dismiss">Dismiss</string>
+    
+</resources>
