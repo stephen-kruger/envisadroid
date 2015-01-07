@@ -208,6 +208,10 @@ public class TPISession extends Session {
 			logd("PARTITION_NOT_READY:"+message);
 			partitionEvent(new PartitionEvent(message,PartitionEvent.State.NOT_READY));
 			break;
+		case Command.PARTITION_ARMED_FORCE_ARM_ENABLED :
+			logd("PARTITION_ARMED_FORCE_ARM_ENABLED:"+message);
+			partitionEvent(new PartitionEvent(message,PartitionEvent.State.ARMED));
+			break;
 		case Command.PARTITION_ARMED : 
 			logd("PARTITION_ARMED:"+message);
 			partitionEvent(new PartitionEvent(message,PartitionEvent.State.ARMED));
