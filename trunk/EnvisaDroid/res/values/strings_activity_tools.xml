@@ -12,12 +12,13 @@
     <string name="no">No</string>
     <string name="armStay">Stay</string>
     <string name="sync">Sync</string>
-    <string name="chime_toggle">Chime</string>
+    <string name="chime_toggle">Chime value toggled on/off</string>
     <string name="report">Report</string>
     <string name="timers">Timers</string>
     <string name="reboot">Reboot</string>
     <string name="success">Success</string>
     <string name="error">Error</string>
     <string name="dismiss">Dismiss</string>
+    <string name="help">Help</string>
     
 </resources>

@@ -3,14 +3,12 @@ package com.madibasoft.envisadroid.sync;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +19,6 @@ import android.widget.TextView;
 
 import com.madibasoft.envisadroid.R;
 import com.madibasoft.envisadroid.SettingsActivity;
-
 import com.madibasoft.envisadroid.application.EnvisadroidApplication;
 import com.madibasoft.envisadroid.log.LogActivity;
 import com.madibasoft.envisadroid.util.Util;
@@ -34,7 +31,7 @@ public class SyncActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sync);
 		// Show the Up button in the action bar.
-		setupActionBar();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		((ProgressBar)findViewById(R.id.syncProgress)).setVisibility(View.INVISIBLE);
 
@@ -97,17 +94,6 @@ public class SyncActivity extends Activity {
 					}
 				});
 	}
-
-	/**
-	 * Set up the {@link android.app.ActionBar}, if the API is available.
-	 */
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	private void setupActionBar() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
-	}
-
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -126,7 +112,8 @@ public class SyncActivity extends Activity {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			NavUtils.navigateUpFromSameTask(this);
+//			NavUtils.navigateUpFromSameTask(this);
+			navigateUpTo(this.getParentActivityIntent());
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

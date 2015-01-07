@@ -28,6 +28,7 @@ public class KeypadActivity extends Activity implements TPIListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_keypad);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	public void hash(View view) {

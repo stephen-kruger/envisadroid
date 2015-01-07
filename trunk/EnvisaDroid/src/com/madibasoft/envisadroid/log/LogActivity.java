@@ -11,12 +11,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
+//import android.support.v4.app.NavUtils;
+//import android.support.v4.widget.SimpleCursorAdapter;
+//import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.SimpleCursorAdapter;
+import android.widget.SimpleCursorAdapter.ViewBinder;
 import android.widget.TextView;
 
 import com.madibasoft.envisadroid.R;
@@ -81,6 +83,7 @@ public class LogActivity extends ListActivity {
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(DB_CHANGED);
 		registerReceiver(this.receiver, filter);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
@@ -108,7 +111,8 @@ public class LogActivity extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			NavUtils.navigateUpFromSameTask(this);
+//			NavUtils.navigateUpFromSameTask(this);
+			navigateUpTo(this.getParentActivityIntent());
 			return true;
 		case R.id.menu_action_clear_log:
 			datasource.clear();

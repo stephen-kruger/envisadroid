@@ -1,14 +1,11 @@
 package com.madibasoft.envisadroid;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +35,7 @@ public class ToolsActivity extends Activity implements TPIListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tools);
 		// Show the Up button in the action bar.
-		setupActionBar();
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		findViewById(R.id.syncButton).setOnClickListener(
 				new View.OnClickListener() {
@@ -221,20 +218,6 @@ public class ToolsActivity extends Activity implements TPIListener {
 		super.onDestroy();
 		((EnvisadroidApplication) getApplication()).removeTDIListener(this);
 	}
-
-
-
-	/**
-	 * Set up the {@link android.app.ActionBar}, if the API is available.
-	 */
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	private void setupActionBar() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			if (getActionBar()!=null)
-				getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
-	}
-
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -246,7 +229,8 @@ public class ToolsActivity extends Activity implements TPIListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			NavUtils.navigateUpFromSameTask(this);
+//			NavUtils.navigateUpFromSameTask(this);
+			navigateUpTo(this.getParentActivityIntent());
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

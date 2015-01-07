@@ -28,7 +28,20 @@
                 android:button="@drawable/flat_button"
                 android:drawableTop="@drawable/device_access_secure"
                 android:enabled="false"
+                android:onClick="armdisarm"
                 android:text="@string/arm" />
+            
+             <Button
+                android:id="@+id/toolsButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:button="@drawable/flat_button"
+                android:drawableTop="@drawable/action_timers"
+                android:enabled="true"
+                android:onClick="tools"
+                android:text="@string/tools" />
 
             <Button
                 android:id="@+id/keypadButton"

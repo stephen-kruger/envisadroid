@@ -83,10 +83,8 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 
 		// this task runs the led flashing functions
 		flashTask = new FlashTask();
-		//		flashTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "");
-		//		flashTask.execute("");
 
-		((EnvisadroidApplication) getApplication()).addTDIListener(EnvisadroidActivity.this);
+		((EnvisadroidApplication) getApplication()).addTDIListener(this);
 
 		// make log text clickable
 		TextView logText  = ((TextView)findViewById(R.id.textLogView));
@@ -99,25 +97,6 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 				}
 			});
 		}
-		
-
-		((Button)findViewById(R.id.armButton)).setOnClickListener(
-				new View.OnClickListener() {
-
-					public void onClick(View view) {
-						try {
-							if (((Button)findViewById(R.id.armButton)).getText().equals(EnvisadroidActivity.this.getString(R.string.arm))) {
-								((EnvisadroidApplication)getApplication()).getSession().armWithCode(1);
-							}
-							else {
-								((EnvisadroidApplication)getApplication()).getSession().disarm(1);
-							}
-						}
-						catch (Throwable e) {
-							ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
-						}
-					}
-				});
 		populateZones();
 	}
 
@@ -314,9 +293,36 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 	};
 
 	public void keypad(View view) {
-		startActivity(new Intent(this, KeypadActivity.class));
+		try {
+			startActivity(new Intent(this, KeypadActivity.class));
+		}
+		catch (Throwable e) {
+			ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+		}
 	}
 
+	public void tools(View view) {
+		try {
+			EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this, ToolsActivity.class));
+		}
+		catch (Throwable e) {
+			ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+		}
+	}
+
+	public void armdisarm(View view) {
+		try {
+			if (((Button)findViewById(R.id.armButton)).getText().equals(EnvisadroidActivity.this.getString(R.string.arm))) {
+				((EnvisadroidApplication)getApplication()).getSession().armWithCode(1);
+			}
+			else {
+				((EnvisadroidApplication)getApplication()).getSession().disarm(1);
+			}
+		}
+		catch (Throwable e) {
+			ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+		}
+	}
 
 	public void zoneEvent(ZoneEvent zoneEvent) {
 		zoneDataSource.updateZone(zoneEvent);
@@ -697,7 +703,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		//		setLed(R.id.ledReady, LEDEvent.State.ON);
 		//		setLed(R.id.ledFire, LEDEvent.State.FLASH);
 	}
-	
-	
+
+
 
 }
