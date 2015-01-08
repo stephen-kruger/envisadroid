@@ -71,17 +71,17 @@ public class ZoneExpandableListAdapter extends BaseExpandableListAdapter impleme
 
 		switch (status) {
 		case Restored :
-			thumb_image.setImageResource(R.drawable.device_access_secure);
+			thumb_image.setImageResource(R.drawable.ic_action_locked);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Fault_Restored :
-			thumb_image.setImageResource(R.drawable.device_access_secure);
+			thumb_image.setImageResource(R.drawable.ic_action_locked);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Open :
-			thumb_image.setImageResource(R.drawable.alerts_and_states_warning);
+			thumb_image.setImageResource(R.drawable.ic_warning);
 			action.setVisibility(View.VISIBLE);
 			action.setText("Bypass all");
 			action.setOnClickListener(new OnClickListener() {
@@ -102,32 +102,32 @@ public class ZoneExpandableListAdapter extends BaseExpandableListAdapter impleme
 			});
 			break;
 		case Fault :
-			thumb_image.setImageResource(R.drawable.alerts_and_states_error);
+			thumb_image.setImageResource(R.drawable.ic_error);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Tamper :
-			thumb_image.setImageResource(R.drawable.alerts_and_states_error);
+			thumb_image.setImageResource(R.drawable.ic_error);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Tamper_Restore :
-			thumb_image.setImageResource(R.drawable.action_report);
+			thumb_image.setImageResource(R.drawable.ic_action_report);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Alarm :
-			thumb_image.setImageResource(R.drawable.alerts_and_states_error);
+			thumb_image.setImageResource(R.drawable.ic_error);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		case Alarm_Restore :
-			thumb_image.setImageResource(R.drawable.action_report);
+			thumb_image.setImageResource(R.drawable.ic_action_report);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 			break;
 		default : 
-			thumb_image.setImageResource(R.drawable.device_access_secure);
+			thumb_image.setImageResource(R.drawable.ic_action_locked);
 			action.setText("");
 			action.setVisibility(View.INVISIBLE);
 		}

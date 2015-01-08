@@ -44,6 +44,6 @@
         android:layout_width="25dip"
         android:layout_height="25dip"
         android:contentDescription="@string/zones"
-        android:src="@drawable/device_access_secure" />
+        android:src="@drawable/ic_action_locked" />
 
 </LinearLayout>
