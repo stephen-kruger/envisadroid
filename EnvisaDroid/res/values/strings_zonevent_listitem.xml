@@ -15,5 +15,8 @@
     
     <string name="zoneevent_zoneCountSingular">zone</string>
     <string name="zoneevent_zoneCountPlural">zones</string>
-
+    <string name="zoneevent_dummy_text">placeholder text</string>
+    <string name="zoneevent_dummy_number">1</string>
+    <string name="zoneevent_dummy_timestamp">10:10 10/10/2013</string>
+    
 </resources>

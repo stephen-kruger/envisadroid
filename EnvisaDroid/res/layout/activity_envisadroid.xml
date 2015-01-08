@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.05"
-        android:background="@color/gradient_start"
+        android:background="@color/gradient_center"
         android:gravity="start|center_vertical" >
 
         <LinearLayout
@@ -26,19 +26,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center"
                 android:button="@drawable/flat_button"
-                android:drawableTop="@drawable/device_access_secure"
+                android:drawableTop="@drawable/ic_action_locked"
                 android:enabled="false"
                 android:onClick="armdisarm"
                 android:text="@string/arm" />
-            
-             <Button
+
+            <Button
                 android:id="@+id/toolsButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center"
                 android:button="@drawable/flat_button"
-                android:drawableTop="@drawable/action_timers"
+                android:drawableTop="@drawable/ic_action_timers"
                 android:enabled="true"
                 android:onClick="tools"
                 android:text="@string/tools" />
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center"
                 android:button="@drawable/flat_button"
-                android:drawableTop="@drawable/keypad"
+                android:drawableTop="@drawable/ic_action_keypad"
                 android:enabled="true"
                 android:onClick="keypad"
                 android:text="@string/pad" />
@@ -71,7 +71,7 @@
                 android:contentDescription="@string/tools"
                 android:enabled="false"
                 android:gravity="center"
-                android:src="@drawable/device_access_volume_off" />
+                android:src="@drawable/ic_action_volume_off" />
 
             <ImageView
                 android:id="@+id/alarmIcon"
@@ -81,7 +81,7 @@
                 android:contentDescription="@string/tools"
                 android:enabled="false"
                 android:gravity="center"
-                android:src="@drawable/megaphone_off" />
+                android:src="@drawable/ic_action_alarm_off" />
 
             <ImageView
                 android:id="@+id/fireIcon"
@@ -91,13 +91,13 @@
                 android:contentDescription="@string/tools"
                 android:enabled="false"
                 android:gravity="center"
-                android:src="@drawable/device_access_flash_off" />
+                android:src="@drawable/ic_action_nosmoking" />
         </LinearLayout>
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0.10" >
 
         <TableLayout
@@ -125,7 +125,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_ready"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -144,7 +144,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_armed"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -163,7 +163,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_mem"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -182,7 +182,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_bypass"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -201,7 +201,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_trouble"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -220,7 +220,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_program"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -238,7 +238,7 @@
                     android:focusable="false"
                     android:text="@string/led_fire"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -257,7 +257,7 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_backlight"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
 
             <TableRow
@@ -276,20 +276,29 @@
                     android:selectAllOnFocus="false"
                     android:text="@string/led_connection"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_end" />
+                    android:textColor="@color/light_text" />
             </TableRow>
         </TableLayout>
-<TableLayout
-    android:layout_weight="0.95">
-        <ExpandableListView
-            android:id="@+id/zoneListView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/gradient_end"
-            android:drawSelectorOnTop="true"
-            android:footerDividersEnabled="false"
-            android:headerDividersEnabled="false" >
-        </ExpandableListView>
+
+        <TableLayout
+            android:layout_weight="0.95"
+            android:background="@color/light_text" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_text" >
+
+                <ExpandableListView
+                    android:id="@+id/zoneListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_text"
+                    android:drawSelectorOnTop="true"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="false" >
+                </ExpandableListView>
+            </TableRow>
         </TableLayout>
     </TableRow>
 
@@ -300,6 +309,6 @@
         android:clickable="true"
         android:text="@string/blank"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/gradient_end" />
+        android:textColor="@color/light_text" />
 
 </TableLayout>

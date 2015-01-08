@@ -552,10 +552,10 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 			public void run() {
 				((ImageView)findViewById(R.id.chimeIcon)).setEnabled(true);
 				if (chimeEvent.getState().equals(ChimeEvent.State.ENABLED)) {
-					((ImageView)findViewById(R.id.chimeIcon)).setImageResource(R.drawable.device_access_volume_on);
+					((ImageView)findViewById(R.id.chimeIcon)).setImageResource(R.drawable.ic_action_volume_on);
 				}
 				else {
-					((ImageView)findViewById(R.id.chimeIcon)).setImageResource(R.drawable.device_access_volume_off);
+					((ImageView)findViewById(R.id.chimeIcon)).setImageResource(R.drawable.ic_action_volume_off);
 				}
 			}
 		});
@@ -568,10 +568,10 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 			public void run() {
 				((ImageView)findViewById(R.id.chimeIcon)).setEnabled(true);
 				if (smokeEvent.getState().equals(SmokeEvent.State.Alarm)) {
-					((ImageView)findViewById(R.id.fireIcon)).setImageResource(R.drawable.device_access_flash_on);
+					((ImageView)findViewById(R.id.fireIcon)).setImageResource(R.drawable.ic_action_smoking);
 				}
 				else {
-					((ImageView)findViewById(R.id.fireIcon)).setImageResource(R.drawable.device_access_flash_off);
+					((ImageView)findViewById(R.id.fireIcon)).setImageResource(R.drawable.ic_action_nosmoking);
 				}		
 			}
 		});
@@ -600,7 +600,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(ns);
 		CharSequence tickerText = msg;
 		long when = System.currentTimeMillis();
-		Notification notification = new Notification(R.drawable.alerts_and_states_error, tickerText, when);
+		Notification notification = new Notification(R.drawable.ic_error, tickerText, when);
 
 		// send android notification
 		CharSequence contentTitle = context.getString(R.string.app_name);
