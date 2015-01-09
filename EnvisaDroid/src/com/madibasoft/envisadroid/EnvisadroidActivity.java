@@ -14,15 +14,20 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
+import android.support.v4.widget.DrawerLayout;
+//import android.support.v4.widget.DrawerLayout;
+//import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
 import android.widget.CompoundButton;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -44,6 +49,7 @@ import com.madibasoft.envisadroid.keypad.KeypadActivity;
 import com.madibasoft.envisadroid.log.LogActivity;
 import com.madibasoft.envisadroid.log.LogTimer;
 import com.madibasoft.envisadroid.sync.SyncHelper;
+import com.madibasoft.envisadroid.util.CustomAdapter;
 import com.madibasoft.envisadroid.util.Util;
 import com.madibasoft.envisadroid.zone.ZoneDataSource;
 import com.madibasoft.envisadroid.zone.ZoneExpandableListAdapter;
@@ -57,7 +63,6 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 	private ZoneExpandableListAdapter zoneAdapter;
 	private FlashTask flashTask;
 	private LogTimer logTimer;
-
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -98,6 +103,115 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 			});
 		}
 		populateZones();
+
+		// set up drawer for all our functions
+		String[] drawerTitles = new String[]{
+				getString(R.string.arm),
+				getString(R.string.armStay),
+				getString(R.string.disarm),
+				getString(R.string.tools),
+				getString(R.string.keypad),
+				getString(R.string.menu_settings),
+				getString(R.string.refresh)};
+		Integer[] drawerIcons = new Integer[]{
+				R.drawable.ic_action_locked,
+				R.drawable.ic_action_stay,
+				R.drawable.ic_action_unlocked,
+				R.drawable.ic_action_tools,
+				R.drawable.ic_action_keypad,
+				R.drawable.ic_action_settings,
+				R.drawable.navigation_refresh};
+		ListView mDrawerList = (ListView) findViewById(R.id.left_drawer);
+		final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		// Set the adapter for the list view
+		CustomAdapter ca;
+		mDrawerList.setAdapter(ca = new CustomAdapter(this, R.layout.drawer_list_item, drawerTitles, drawerIcons));
+		ca.setEnabled(2, false);
+		// Set the list's click listener
+		mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+				mDrawerLayout.closeDrawers();
+				switch (position) {
+				case 0 :
+					try {
+						((EnvisadroidApplication)getApplication()).getSession().armWithCode(1);
+					} 
+					catch (EnvisaException e) {
+						ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+						e.printStackTrace();
+					}
+					break;
+				case 1 :
+					try {
+						((EnvisadroidApplication)getApplication()).getSession().armStay(1);
+					} 
+					catch (EnvisaException e) {
+						ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+						e.printStackTrace();
+					}
+					break;
+				case 2 :
+					try {
+						((EnvisadroidApplication)getApplication()).getSession().disarm(1);;
+					} 
+					catch (EnvisaException e) {
+						ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+						e.printStackTrace();
+					}
+					break;
+				case 3 :
+					EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this.getBaseContext(), ToolsActivity.class));
+					break;
+				case 4 :
+					EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this.getBaseContext(), KeypadActivity.class));
+					break;
+				case 5 :
+					EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this.getBaseContext(), SettingsActivity.class));
+					break;
+				case 6 :
+					try {
+						((EnvisadroidApplication)getApplication()).getSession().dumpZoneTimers();
+					} 
+					catch (EnvisaException e) {
+						ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+						e.printStackTrace();
+					}
+					break;
+				default :
+					Log.i("xxx", "unexpected code:"+position);
+				}
+			}
+
+		});
+
+//		// set up drawer to work with action bar
+//		ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
+//						this,                  /* host Activity */
+//						mDrawerLayout,         /* DrawerLayout object */
+//						R.string.drawer_open,  /* "open drawer" description */
+//						R.string.drawer_close  /* "close drawer" description */
+//						) {
+//		
+//					/** Called when a drawer has settled in a completely closed state. */
+//					public void onDrawerClosed(View view) {
+//						super.onDrawerClosed(view);
+//						getActionBar().setTitle("closed");
+//					}
+//		
+//					/** Called when a drawer has settled in a completely open state. */
+//					public void onDrawerOpened(View drawerView) {
+//						super.onDrawerOpened(drawerView);
+//						getActionBar().setTitle("open");
+//					}
+//				};
+//
+//		// Set the drawer toggle as the DrawerListener
+//				mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
 	}
 
 
@@ -175,77 +289,21 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 			}
 		});
 
+		// change up icon to show drawer
+		getActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
+
 		return true;
 	}
 
 
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
-		switch (item.getItemId()) {
-		case R.id.menu_action_connect :
-			if (((MenuItem)menu.findItem(R.id.menu_action_connect)).getTitle()==getString(R.string.connect)) {
-				try {
-					if (menu!=null) {
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.disconnect);
-					}
-
-					setLed(R.id.ledConnection,LEDEvent.State.FLASH);
-					((EnvisadroidApplication)getApplication()).connect();
-				} 
-				catch (Throwable e1) {
-					log( "Error connecting :"+e1.getMessage());
-					e1.printStackTrace();
-				}				
-			}
-			else {
-				try {
-					((EnvisadroidApplication)getApplication()).disconnect();
-					ledsOff();
-					if (menu!=null) {
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.connect);
-					}
-				} 
-				catch (Throwable e1) {
-					log( "Error disconnecting :"+e1.getMessage());
-					e1.printStackTrace();
-				}	
-			}
-
-			break;
-			//		case R.id.menu_action_arm :
-			//			try {
-			//				((EnvisadroidApplication)getApplication()).getSession().armWithCode(1);
-			//			} 
-			//			catch (EnvisaException e) {
-			//				ToolsActivity.dialog(this,R.string.error,e.getMessage());
-			//				e.printStackTrace();
-			//			}
-			//			break;
-			//		case R.id.menu_action_log :
-			//			EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this, LogActivity.class));
-			//			break;
-			//		case R.id.menu_action_tools :
-			//			EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this, ToolsActivity.class));
-			//			break;
-		case R.id.menu_action_settings:
-			EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this.getBaseContext(), SettingsActivity.class));
-			break;
-		case R.id.menu_action_refresh:
-			try {
-				((EnvisadroidApplication)getApplication()).getSession().dumpZoneTimers();
-			} 
-			catch (EnvisaException e) {
-				ToolsActivity.dialog(this,R.string.error,e.getMessage());
-				e.printStackTrace();
-			}
-			break;			
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-		return true;
+		Log.i("xxx", R.menu.activity_main+"zzzzzzzzzzzzzz"+item.getItemId());
+		DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mDrawerLayout.openDrawer(Gravity.START);
+		return super.onOptionsItemSelected(item);
 	}
+
 	public void zoneClicked(View view,final ZoneEvent ze) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		// Add the buttons
@@ -304,20 +362,6 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 	public void tools(View view) {
 		try {
 			EnvisadroidActivity.this.startActivity(new Intent(EnvisadroidActivity.this, ToolsActivity.class));
-		}
-		catch (Throwable e) {
-			ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
-		}
-	}
-
-	public void armdisarm(View view) {
-		try {
-			if (((Button)findViewById(R.id.armButton)).getText().equals(EnvisadroidActivity.this.getString(R.string.arm))) {
-				((EnvisadroidApplication)getApplication()).getSession().armWithCode(1);
-			}
-			else {
-				((EnvisadroidApplication)getApplication()).getSession().disarm(1);
-			}
 		}
 		catch (Throwable e) {
 			ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
@@ -404,17 +448,17 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_secure);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(true);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
-						((Button)findViewById(R.id.keypadButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.keypadButton)).setEnabled(true);
 						log("Ready");
 						break;
 					case NOT_READY :
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(false);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
-						((Button)findViewById(R.id.armButton)).setEnabled(false);
-						((Button)findViewById(R.id.keypadButton)).setEnabled(false);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(false);
+						//						((Button)findViewById(R.id.keypadButton)).setEnabled(false);
 						log("Not ready");
 						break;
 					case ARMED :
@@ -422,16 +466,16 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_not_secure);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(true);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Armed");
 						break;
 					case DISARMED :
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setTitle(R.string.arm);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_secure);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Disarmed");
 						break;
 					case ALARM :
@@ -439,8 +483,8 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_not_secure);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(true);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Alarm");
 						break;
 					case EXIT_DELAY :
@@ -448,8 +492,8 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_not_secure);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(true);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Exit delay");
 						break;
 					case ENTRY_DELAY :
@@ -457,23 +501,23 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_secure);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(true);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Entry delay");
 						break;
 					case BUSY :
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setEnabled(false);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText("");
-						((Button)findViewById(R.id.armButton)).setEnabled(false);
+						//						((Button)findViewById(R.id.armButton)).setText("");
+						//						((Button)findViewById(R.id.armButton)).setEnabled(false);
 						log("Busy");
 						break;
 					case FAILED_TO_ARM :
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setTitle(R.string.arm);
 						//						((MenuItem)menu.findItem(R.id.menu_action_arm)).setIcon(R.drawable.device_access_secure);
 						// toolbar
-						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
-						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
+						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						log("Failed to arm");
 						break;
 					}
@@ -504,7 +548,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
 						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.connect);
 					}
-					((Button)findViewById(R.id.keypadButton)).setEnabled(false);
+					//					((Button)findViewById(R.id.keypadButton)).setEnabled(false);
 				}
 			});
 			break;
@@ -517,7 +561,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
 						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.disconnect);
 					}
-					((Button)findViewById(R.id.keypadButton)).setEnabled(true);
+					//					((Button)findViewById(R.id.keypadButton)).setEnabled(true);
 				}
 			});
 			break;
@@ -690,18 +734,6 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 				zoneDataSource.createZone(new ZoneEvent(1,i,ZoneEvent.State.Restored));
 			}
 		}
-		//		String jsonStr = "{'state':'ON','function':'FIRE'}";
-		//		try {
-		//			LEDEvent led = new LEDEvent(new JSONObject(jsonStr));
-		//			System.out.println("1>>>>>>"+led.toString());
-		//			led.fromJSON(new JSONObject(jsonStr));
-		//			System.out.println("2>>>>>>"+led.toString());
-		//		} catch (JSONException e) {
-		//			// TODO Auto-generated catch block
-		//			e.printStackTrace();
-		//		};
-		//		setLed(R.id.ledReady, LEDEvent.State.ON);
-		//		setLed(R.id.ledFire, LEDEvent.State.FLASH);
 	}
 
 

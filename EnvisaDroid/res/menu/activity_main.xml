@@ -4,18 +4,6 @@
         android:id="@+id/menu_action_connect"
         android:icon="@drawable/navigation_accept"
         android:title="@string/connect"
-        android:showAsAction="always"
+        android:showAsAction="ifRoom"
         android:actionLayout="@layout/switch_layout"/>
-    <item
-        android:id="@+id/menu_action_settings"
-        android:icon="@drawable/ic_action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/menu_settings"/>
-    <item
-        android:id="@+id/menu_action_refresh"
-        android:icon="@drawable/navigation_refresh"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/refresh"/>
-
 </menu>
