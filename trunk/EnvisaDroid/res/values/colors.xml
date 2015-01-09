@@ -5,11 +5,5 @@
     <color name="gradient_end">#7FB6D9</color>
     <color name="black_overlay">#660000</color>
     <color name="light_text">#ffffff</color>
-<!-- 
-    <color name="gradient_start">#aaccaa</color>
-    <color name="gradient_center">#cccccc</color>
-    <color name="gradient_end">#FFFFFF</color>
-    <color name="black_overlay">#66000000</color>
-     -->
-
+    <color name="dark_text">#000000</color>
 </resources>

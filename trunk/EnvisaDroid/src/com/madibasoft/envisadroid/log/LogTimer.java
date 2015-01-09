@@ -15,7 +15,8 @@ public class LogTimer extends CountDownTimer {
 	
 	@Override
 	public void onFinish() {
-		logText.setVisibility(View.GONE);		
+		logText.setVisibility(View.VISIBLE);		
+		logText.setText("");
 	}
 
 	@Override
