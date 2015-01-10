@@ -5,7 +5,7 @@
     <string name="sync_send">Send</string>
     <string name="sync_receive">Receive</string>
     <string name="sync_help">Synchronise your zone name definitions between devices running on this network</string>
-    <string name="really_send">Set this devices zone definitions for retrieval by your other devices?</string>
-    <string name="really_receive">Receive zone definitions from your primary device? This will overwrite the names on this device</string>
+    <string name="really_send">Store this devices zone names in the cloud?</string>
+    <string name="really_receive">Receive zone names from the cloud? This will overwrite the names on this device</string>
     
 </resources>

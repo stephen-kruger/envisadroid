@@ -6,13 +6,19 @@
     android:gravity="center_vertical|center_horizontal"
     android:orientation="horizontal"
     android:paddingEnd="2dip"
-    android:paddingStart="1dip" >
+    android:paddingLeft="3dip"
+    android:paddingRight="2dip"
+    android:paddingStart="3dip" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:paddingEnd="0dp"
+        android:paddingLeft="3dip"
+        android:paddingRight="0dip"
+        android:paddingStart="3dip" >
 
         <TextView
             android:id="@+id/group_title"

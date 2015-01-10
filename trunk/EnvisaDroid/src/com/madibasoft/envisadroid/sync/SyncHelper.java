@@ -41,7 +41,7 @@ public class SyncHelper {
 	public JSONObject receiveSettings(Context c) {
 		try {
 			LogActivity.log(c, "Syncing settings for "+host);
-			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
+			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host.toLowerCase()+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
 			HttpClient client = new DefaultHttpClient();
 			HttpGet restApi = new HttpGet(url);
 			HttpResponse response = client.execute(restApi);
@@ -70,7 +70,7 @@ public class SyncHelper {
 		//	          contentType: "application/json" } );
 		try {
 			LogActivity.log(c, "Syncing settings for "+host);
-			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
+			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host.toLowerCase()+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
 			HttpClient client = new DefaultHttpClient();
 			HttpPost restApi = new HttpPost(url);restApi.setHeader("Content-Type", "application/json");
 			restApi.setEntity(new StringEntity(zoneData.toString()));
@@ -94,7 +94,7 @@ public class SyncHelper {
 		for (int j = 1; j < 5; j++) {
 			// scroll through each zone
 			for (int i = 1; i < 65; i++) {
-				zoneName = getZoneName(c, new ZoneEvent(1,i,ZoneEvent.State.Restored),null);
+				zoneName = getZoneName(c, new ZoneEvent(1,i,ZoneEvent.State.Restored));
 				if (zoneName!=null)
 					zoneData.put(Integer.toString(j)+':'+Integer.toString(i), zoneName);
 			}
@@ -118,6 +118,7 @@ public class SyncHelper {
 					}
 				}
 			}
+			Log.i("xxx", zoneData.toString());
 			return "";
 		}
 		catch (Throwable t) {
@@ -137,12 +138,20 @@ public class SyncHelper {
 	}
 
 	public String getZoneName(Context c, ZoneEvent ze) {
-		return getZoneName(c,ze,c.getString(R.string.zoneevent_zoneCountSingular)+" "+ze.getZone());
+		return getZoneName(ze.getPartition(),ze.getZone(),c.getString(R.string.zoneevent_zoneCountSingular)+" "+ze.getZone());
 	}
 	
-	public String getZoneName(Context c, ZoneEvent ze, String defaultValue) {
-		String key = ze.getPartition()+":"+ze.getZone();
-//		return settings.getString(ZoneEvent.class.getName()+ze.getPartition()+":"+ze.getZone(), defaultValue);
+//	public String getZoneName(Context c, ZoneEvent ze, String defaultValue) {
+//		return getZoneName(ze.getPartition(),ze.getZone(),defaultValue);
+//	}
+	
+	public String getZoneName(int partition, int zone, String defaultValue) {
+		String key = partition+":"+zone;
+		return settings.getString(key, defaultValue);
+	}
+	
+	public static String getZoneName(SharedPreferences settings, int partition, int zone, String defaultValue) {
+		String key = partition+":"+zone;
 		return settings.getString(key, defaultValue);
 	}
 

@@ -298,7 +298,6 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
-		Log.i("xxx", R.menu.activity_main+"zzzzzzzzzzzzzz"+item.getItemId());
 		DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerLayout.openDrawer(Gravity.START);
 		return super.onOptionsItemSelected(item);
@@ -451,6 +450,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
 						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						//						((Button)findViewById(R.id.keypadButton)).setEnabled(true);
+						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Ready "+e.toString());
 						log("Ready");
 						break;
 					case NOT_READY :
@@ -468,6 +468,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						// toolbar
 						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
 						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Armed "+e.toString());
 						log("Armed");
 						break;
 					case DISARMED :
@@ -485,6 +486,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						// toolbar
 						//						((Button)findViewById(R.id.armButton)).setText(R.string.disarm);
 						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
+						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Alarm triggered "+e.toString());
 						log("Alarm");
 						break;
 					case EXIT_DELAY :
@@ -532,48 +534,51 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		case TIMEDOUT :
 			ledsOff();
 			log("Login timeout");
+			break;
 		case FAILED :
 			ledsOff();
 			log("Login failed");
+			break;
 		case CONNECTION_FAIL :
 			ledsOff();
 			log("Connection fail");
+			break;
 		case LOGGEDOUT :
 			ledsOff();
 			setLed(R.id.ledConnection,LEDEvent.State.OFF);
 			log("Logged out");
-			runOnUiThread(new Runnable() {
-				public void run() {
-					if (menu!=null) {
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.connect);
-					}
-					//					((Button)findViewById(R.id.keypadButton)).setEnabled(false);
-				}
-			});
+//			runOnUiThread(new Runnable() {
+//				public void run() {
+//					if (menu!=null) {
+//						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
+//						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.connect);
+//					}
+//					//					((Button)findViewById(R.id.keypadButton)).setEnabled(false);
+//				}
+//			});
 			break;
 		case LOGGEDIN :
 			setLed(R.id.ledConnection,LEDEvent.State.ON);
 			log("Logged in");
-			runOnUiThread(new Runnable() {
-				public void run() {
-					if (menu!=null) {
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.disconnect);
-					}
-					//					((Button)findViewById(R.id.keypadButton)).setEnabled(true);
-				}
-			});
+//			runOnUiThread(new Runnable() {
+//				public void run() {
+//					if (menu!=null) {
+//						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(true);
+//						((MenuItem)menu.findItem(R.id.menu_action_connect)).setTitle(R.string.disconnect);
+//					}
+//					//					((Button)findViewById(R.id.keypadButton)).setEnabled(true);
+//				}
+//			});
 			break;
 		case REQUESTING :
 			setLed(R.id.ledConnection,LEDEvent.State.FLASH);
 			log("Login requested");
-			runOnUiThread(new Runnable() {
-				public void run() {
-					if (menu!=null)
-						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(false);
-				}
-			});
+//			runOnUiThread(new Runnable() {
+//				public void run() {
+//					if (menu!=null)
+//						((MenuItem)menu.findItem(R.id.menu_action_connect)).setEnabled(false);
+//				}
+//			});
 			break;
 		}
 	}
@@ -583,15 +588,15 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		log("Info :"+infoEvent.toString());
 	}
 
-
 	public void errorEvent(ErrorEvent errorEvent) {
 		log("Error :"+errorEvent.toString());
 		sendNotification(this.getBaseContext(),errorEvent.toString());
 	}
 
-
 	public void chimeEvent(final ChimeEvent chimeEvent) {
 		log("Chime :"+chimeEvent.toString());
+		sendNotification(this.getBaseContext(),chimeEvent.toString());
+
 		runOnUiThread(new Runnable() {
 			public void run() {
 				((ImageView)findViewById(R.id.chimeIcon)).setEnabled(true);
@@ -621,10 +626,8 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		});
 	}
 
-
 	public void panelEvent(PanelEvent panelEvent) {		
 	}
-
 
 	public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 		ZoneEvent ze = (ZoneEvent) zoneAdapter.getChild(groupPosition, childPosition);
@@ -644,7 +647,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(ns);
 		CharSequence tickerText = msg;
 		long when = System.currentTimeMillis();
-		Notification notification = new Notification(R.drawable.ic_error, tickerText, when);
+		Notification notification = new Notification(R.drawable.ic_launcher, tickerText, when);
 
 		// send android notification
 		CharSequence contentTitle = context.getString(R.string.app_name);
@@ -654,7 +657,7 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
 
 		notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
-		notification.flags = Notification.DEFAULT_LIGHTS | Notification.FLAG_AUTO_CANCEL;
+		notification.flags = Notification.DEFAULT_LIGHTS | Notification.FLAG_AUTO_CANCEL| Notification.DEFAULT_VIBRATE| Notification.DEFAULT_SOUND;
 
 		mNotificationManager.notify(6758, notification);
 	}
