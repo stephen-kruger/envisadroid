@@ -36,7 +36,7 @@ public class ChimeEvent extends GenericEvent {
 	}
 	
 	public String toString() {
-		return getPartition()+" "+getState().name();
+		return "Chime Event Partition="+getPartition()+" State="+getState().name();
 	}
 	
 	@Override
