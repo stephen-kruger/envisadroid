@@ -450,7 +450,20 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						//						((Button)findViewById(R.id.armButton)).setText(R.string.arm);
 						//						((Button)findViewById(R.id.armButton)).setEnabled(true);
 						//						((Button)findViewById(R.id.keypadButton)).setEnabled(true);
-						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Ready "+e.toString());
+						// double click chime so we get the status
+						try {
+							((EnvisadroidApplication)getApplication()).getSession().toggleChime(1);
+							try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+							((EnvisadroidApplication)getApplication()).getSession().toggleChime(1);
+						} 
+						catch (EnvisaException e) {
+							ToolsActivity.dialog(EnvisadroidActivity.this,R.string.error,e.getMessage());
+							e.printStackTrace();
+						}
 						log("Ready");
 						break;
 					case NOT_READY :
