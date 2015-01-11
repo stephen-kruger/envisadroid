@@ -18,11 +18,14 @@ import android.util.Log;
 import com.madibasoft.envisadroid.api.EnvisaException;
 import com.madibasoft.envisadroid.api.Session;
 import com.madibasoft.envisadroid.api.tpi.event.ChimeEvent;
+import com.madibasoft.envisadroid.api.tpi.event.CloseEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ErrorEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent.Function;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
+import com.madibasoft.envisadroid.api.tpi.event.OpenEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ZoneEvent;
@@ -245,6 +248,51 @@ public class TPISession extends Session {
 			infoEvent(new InfoEvent("INSTALLER_MODE:"+message));
 			setInstallerMode(true);
 			break;
+		case Command.USER_CLOSING : 
+			logd("USER_CLOSING:"+message);
+			closeEvent(new CloseEvent(message,CloseEvent.Type.User));
+			break;
+		case Command.SPECIAL_CLOSING : 
+			logd("SPECIAL_CLOSING:"+message);
+			closeEvent(new CloseEvent(message,CloseEvent.Type.Special));
+			break;
+		case Command.PARTIAL_CLOSING : 
+			logd("PARTIAL_CLOSING:"+message);
+			closeEvent(new CloseEvent(message,CloseEvent.Type.Partial));
+			break;
+		case Command.USER_OPENING : 
+			logd("USER_OPENING:"+message);
+			openEvent(new OpenEvent(message,OpenEvent.Type.User));
+			break;
+		case Command.SPECIAL_OPENING : 
+			logd("SPECIAL_OPENING:"+message);
+			openEvent(new OpenEvent(message,OpenEvent.Type.Special));
+			break;
+		case Command.PANEL_BATTERY_TROUBLE :
+			logd("PANEL_BATTERY_TROUBLE:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.BatteryTrouble));
+			break;
+		case Command.PANEL_BATTERY_TROUBLE_RESTORE :
+			logd("PANEL_BATTERY_TROUBLE_RESTORE:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.BatteryTroubleRestore));
+			break;
+		case Command.PANEL_AC_TROUBLE :
+			logd("PANEL_AC_TROUBLE:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.ACTrouble));
+			break;
+		case Command.PANEL_AC_RESTORE :
+			logd("PANEL_AC_RESTORE:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.ACRestore));
+			break;
+		case Command.SYSTEM_BELL_TROUBLE :
+			logd("SYSTEM_BELL_TROUBLE:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.SystemBellTrouble));
+			break;
+		case Command.SYSTEM_BELL_TROUBLE_RESTORED :
+			logd("SYSTEM_BELL_TROUBLE_RESTORED:"+message);
+			panelEvent(new PanelEvent(message,PanelEvent.Type.SystemBellTroubleRestore));
+			break;
+			
 		case Command.CMD_ERR : 
 			logi("CMD_ERR:"+message);
 			expectFound(message);

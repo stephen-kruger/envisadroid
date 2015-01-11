@@ -15,12 +15,15 @@ import com.madibasoft.envisadroid.api.EnvisaException;
 import com.madibasoft.envisadroid.api.Session;
 import com.madibasoft.envisadroid.api.tpi.TPISession;
 import com.madibasoft.envisadroid.api.tpi.event.ChimeEvent;
+import com.madibasoft.envisadroid.api.tpi.event.CloseEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ErrorEvent;
 import com.madibasoft.envisadroid.api.tpi.event.GenericEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
+import com.madibasoft.envisadroid.api.tpi.event.OpenEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelModeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.TPIListener;
@@ -79,7 +82,7 @@ public class EnvisadroidApplication extends Application implements TPIListener, 
 			session.addTDIListener(l);
 		}
 
-		session.panelEvent(new PanelEvent(mode));
+		session.panelEvent(new PanelModeEvent(mode));
 
 		if (Util.getBoolPreference(this, SettingsActivity.AUTOCONNECT)) {
 			try {
@@ -153,10 +156,10 @@ public class EnvisadroidApplication extends Application implements TPIListener, 
 	public void addTDIListener(TPIListener listener) {
 		session.addTDIListener(listener);
 		if (session instanceof TPISession) {
-			listener.panelEvent(new PanelEvent(Session.Mode.TPI));			
+			listener.panelModeEvent(new PanelModeEvent(Session.Mode.TPI));			
 		}
 		else {
-			listener.panelEvent(new PanelEvent(Session.Mode.NONTPI));						
+			listener.panelModeEvent(new PanelModeEvent(Session.Mode.NONTPI));						
 		}
 		// send newly registered listener last 100 past events
 		List<GenericEvent> events = eds.getAllEvents();
@@ -352,23 +355,31 @@ public class EnvisadroidApplication extends Application implements TPIListener, 
 	
 	public void chimeEvent(ChimeEvent chimeEvent) {
 		persistEvent(chimeEvent);
-		//		lastChimeEvent = chimeEvent;		
 	}
 
+	public void closeEvent(CloseEvent closeEvent) {
+		persistEvent(closeEvent);		
+	}
+
+	public void openEvent(OpenEvent openEvent) {
+		persistEvent(openEvent);		
+	}
+	
+	public void panelEvent(PanelEvent panelEvent) {
+		persistEvent(panelEvent);	
+	}
 	
 	public void smokeEvent(SmokeEvent smokeEvent) {
 		persistEvent(smokeEvent);
-		//		lastSmokeEvent = smokeEvent;		
 	}
 
 	
-	public void panelEvent(PanelEvent panelEvent) {
+	public void panelModeEvent(PanelModeEvent panelEvent) {
 		persistEvent(panelEvent);
 	}
 
 	public Session getSession() {
 		return session;
 	}
-
 
 }

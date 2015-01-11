@@ -14,11 +14,14 @@ import android.widget.Button;
 
 import com.madibasoft.envisadroid.api.EnvisaException;
 import com.madibasoft.envisadroid.api.tpi.event.ChimeEvent;
+import com.madibasoft.envisadroid.api.tpi.event.CloseEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ErrorEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
+import com.madibasoft.envisadroid.api.tpi.event.OpenEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelModeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.TPIListener;
@@ -247,7 +250,7 @@ public class ToolsActivity extends Activity implements TPIListener {
 
 
 	
-	public void panelEvent(PanelEvent panelEvent) {
+	public void panelModeEvent(PanelModeEvent panelEvent) {
 		// disable / enable buttons based on select panel type
 		switch (panelEvent.getMode()) {
 		case TPI : 
@@ -329,6 +332,30 @@ public class ToolsActivity extends Activity implements TPIListener {
 
 	
 	public void zoneEvent(ZoneEvent ge) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void closeEvent(CloseEvent closeEvent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void openEvent(OpenEvent openEvent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void panelEvent(PanelEvent panelEvent) {
 		// TODO Auto-generated method stub
 		
 	}

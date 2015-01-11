@@ -13,7 +13,7 @@ import com.madibasoft.envisadroid.api.tpi.event.GenericEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
-import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelModeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ZoneEvent;
@@ -101,8 +101,8 @@ public class EventDataSource {
 	private GenericEvent cursorToEvent(Cursor cursor) throws JSONException {
 		JSONObject jo = new JSONObject(cursor.getString(1));
 		GenericEvent ge = null;
-		if (jo.getString("eventClass").equals(PanelEvent.class.getName())) {
-			ge = new PanelEvent(jo);
+		if (jo.getString("eventClass").equals(PanelModeEvent.class.getName())) {
+			ge = new PanelModeEvent(jo);
 		}
 		if (jo.getString("eventClass").equals(ChimeEvent.class.getName())) {
 			ge = new ChimeEvent(jo);

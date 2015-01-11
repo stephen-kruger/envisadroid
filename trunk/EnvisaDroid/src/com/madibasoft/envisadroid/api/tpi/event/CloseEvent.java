@@ -5,12 +5,12 @@ import org.json.JSONObject;
 
 import com.madibasoft.envisadroid.api.tpi.Message;
 
-public class PanelEvent extends GenericEvent {
-	public enum Type {BatteryTrouble, BatteryTroubleRestore, ACTrouble, ACRestore, SystemBellTrouble, SystemBellTroubleRestore};
+public class CloseEvent extends GenericEvent {
+	public enum Type {User, Special, Partial};
 	private int partition;
 	private Type type;
 
-	public PanelEvent(Message m, Type s) {
+	public CloseEvent(Message m, Type s) {
 		setPartition(m.getPartition());
 		setType(s);
 	}
