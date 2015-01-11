@@ -15,8 +15,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
 import android.support.v4.widget.DrawerLayout;
-//import android.support.v4.widget.DrawerLayout;
-//import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -427,42 +425,42 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 				if (e.getPartition()==1) {
 					switch (e.getState()) {
 					case READY :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), true);
 						log("Ready");
 						break;
 					case NOT_READY :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), false);
 						log("Not ready");
 						break;
 					case ARMED :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
 						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Armed "+e.toString());
 						log("Armed");
 						break;
 					case DISARMED :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
 						log("Disarmed");
 						break;
 					case ALARM :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
 						sendNotification(EnvisadroidActivity.this.getBaseContext(),"Alarm triggered "+e.toString());
 						log("Alarm");
 						break;
 					case EXIT_DELAY :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
 						log("Exit delay");
 						break;
 					case ENTRY_DELAY :
@@ -475,16 +473,16 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 						log("Entry delay");
 						break;
 					case BUSY :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
-						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), false);
 						log("Busy");
 						break;
 					case FAILED_TO_ARM :
-						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
-						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
+						//						drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
+						//						drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), false);
 						log("Failed to arm");
 						break;
 					}
@@ -517,6 +515,16 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		case LOGGEDIN :
 			setLed(R.id.ledConnection,LEDEvent.State.ON);
 			log("Logged in");
+			drawerAdapter.setEnabled(DrawerItems.arm.ordinal(), true);
+			drawerAdapter.setEnabled(DrawerItems.armStay.ordinal(), true);
+			drawerAdapter.setEnabled(DrawerItems.disarm.ordinal(), true);
+			drawerAdapter.setEnabled(DrawerItems.keypad.ordinal(), true);
+			drawerAdapter.setEnabled(DrawerItems.refresh.ordinal(), true);
+			runOnUiThread(new Runnable() {
+				public void run() {
+					drawerAdapter.notifyDataSetChanged();
+				}
+			});
 			break;
 		case REQUESTING :
 			setLed(R.id.ledConnection,LEDEvent.State.FLASH);
@@ -561,12 +569,12 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		log("Open :"+openEvent.toString());				
 		// TODO Auto-generated method stub
 	}
-	
+
 	public void panelEvent(PanelEvent panelEvent) {
 		log("Panel :"+panelEvent.toString());				
 		// TODO Auto-generated method stub		
 	}
-	
+
 	public void smokeEvent(final SmokeEvent smokeEvent) {
 		log("Smoke :"+smokeEvent.toString());
 		runOnUiThread(new Runnable() {
