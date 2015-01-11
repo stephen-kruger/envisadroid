@@ -7,11 +7,14 @@ import java.util.logging.Logger;
 import com.madibasoft.envisadroid.api.tpi.Command;
 import com.madibasoft.envisadroid.api.tpi.TPISession;
 import com.madibasoft.envisadroid.api.tpi.event.ChimeEvent;
+import com.madibasoft.envisadroid.api.tpi.event.CloseEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ErrorEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
+import com.madibasoft.envisadroid.api.tpi.event.OpenEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelModeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.TPIListener;
@@ -155,9 +158,9 @@ public abstract class Session implements Runnable {
 		}
 	}
 
-	public void panelEvent(PanelEvent event){
+	public void panelEvent(PanelModeEvent event){
 		for(TPIListener t: getTDIListeners()){
-			t.panelEvent(event);
+			t.panelModeEvent(event);
 		}
 	}
 
@@ -207,6 +210,24 @@ public abstract class Session implements Runnable {
 	protected void infoEvent(InfoEvent infoEvent) {
 		for(TPIListener t: getTDIListeners()){
 			t.infoEvent(infoEvent);
+		}
+	}
+	
+	protected void closeEvent(CloseEvent infoEvent) {
+		for(TPIListener t: getTDIListeners()){
+			t.closeEvent(infoEvent);
+		}
+	}
+	
+	protected void openEvent(OpenEvent infoEvent) {
+		for(TPIListener t: getTDIListeners()){
+			t.openEvent(infoEvent);
+		}
+	}
+	
+	protected void panelEvent(PanelEvent panelEvent) {
+		for(TPIListener t: getTDIListeners()){
+			t.panelEvent(panelEvent);
 		}
 	}
 

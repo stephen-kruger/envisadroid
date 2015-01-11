@@ -29,10 +29,6 @@ public class CustomAdapter extends ArrayAdapter<String> {
 		for (int i = 0; i < itemname.length; i++)
 			enabledList[i] = true;
 	}
-	
-	public void setEnabled(int position, boolean enabled) {
-		enabledList[position] = enabled;
-	}
 
 	public View getView(int position, View view, ViewGroup parent) {
 		if (view==null)
@@ -46,11 +42,29 @@ public class CustomAdapter extends ArrayAdapter<String> {
 		txtTitle.setText(itemname[position]);
 		imageView.setImageResource(imgid[position]);
 		
-		if (view!=null) {
-			view.setEnabled(enabledList[position]);
+		if (enabledList[position]) {
+			txtTitle.setTextColor(parent.getResources().getColor(R.color.dark_text));
+		}
+		else {
+			txtTitle.setTextColor(parent.getResources().getColor(R.color.light_text));
 		}
 		rowView.setEnabled(enabledList[position]);
 		return rowView;
 
-	};
+	}
+
+	@Override
+	public boolean areAllItemsEnabled() {
+		return false;
+	}
+
+	@Override
+	public boolean isEnabled(int position) {
+		return enabledList[position];
+	}
+	
+	public void setEnabled(int position, boolean enabled) {
+		enabledList[position] = enabled;
+	}
+	
 }

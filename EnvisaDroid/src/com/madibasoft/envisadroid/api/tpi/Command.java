@@ -56,6 +56,20 @@ public class Command {
 	public static final int FAILURE_TO_ARM = 672;
 	public static final int PARTITION_BUSY = 673;
 	public static final int INSTALLER_MODE = 680;
+	public static final int USER_CLOSING = 700;
+	public static final int SPECIAL_CLOSING = 701;
+	public static final int PARTIAL_CLOSING = 702;
+	public static final int USER_OPENING = 750;
+	public static final int SPECIAL_OPENING = 751;
+
+	public static final int PANEL_BATTERY_TROUBLE = 800;
+	public static final int PANEL_BATTERY_TROUBLE_RESTORE = 801;
+	public static final int PANEL_AC_TROUBLE = 802;
+	public static final int PANEL_AC_RESTORE = 803;
+	public static final int SYSTEM_BELL_TROUBLE = 806;
+	public static final int SYSTEM_BELL_TROUBLE_RESTORED = 807;
+
+	
 	public static final int TROUBLE_LED_ON = 840;
 	public static final int TROUBLE_LED_OFF = 841;
 	public static final int CODE_REQUIRED = 900;

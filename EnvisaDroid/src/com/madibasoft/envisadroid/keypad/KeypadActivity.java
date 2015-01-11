@@ -9,11 +9,14 @@ import com.madibasoft.envisadroid.R;
 import com.madibasoft.envisadroid.api.EnvisaException;
 import com.madibasoft.envisadroid.api.tpi.Command;
 import com.madibasoft.envisadroid.api.tpi.event.ChimeEvent;
+import com.madibasoft.envisadroid.api.tpi.event.CloseEvent;
 import com.madibasoft.envisadroid.api.tpi.event.ErrorEvent;
 import com.madibasoft.envisadroid.api.tpi.event.InfoEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LEDEvent;
 import com.madibasoft.envisadroid.api.tpi.event.LoginEvent;
+import com.madibasoft.envisadroid.api.tpi.event.OpenEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PanelEvent;
+import com.madibasoft.envisadroid.api.tpi.event.PanelModeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.PartitionEvent;
 import com.madibasoft.envisadroid.api.tpi.event.SmokeEvent;
 import com.madibasoft.envisadroid.api.tpi.event.TPIListener;
@@ -24,7 +27,7 @@ import com.madibasoft.envisadroid.util.Util;
 public class KeypadActivity extends Activity implements TPIListener {
 
 
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_keypad);
@@ -108,58 +111,53 @@ public class KeypadActivity extends Activity implements TPIListener {
 		charPress("9");
 	}
 
-	
-	public void panelEvent(PanelEvent panelEvent) {
+	public void panelModeEvent(PanelModeEvent panelEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void zoneEvent(ZoneEvent ge) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void ledEvent(LEDEvent ledEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void partitionEvent(PartitionEvent partitionEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void loginEvent(LoginEvent loginEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void errorEvent(ErrorEvent errorEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void infoEvent(InfoEvent infoEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
-	
 	public void chimeEvent(ChimeEvent chimeEvent) {
 		// TODO Auto-generated method stub
+	}
+
+	public void smokeEvent(SmokeEvent smokeEvent) {
+		// TODO Auto-generated method stub
+	}
+
+	public void closeEvent(CloseEvent closeEvent) {
+		// TODO Auto-generated method stub
+	}
+
+	public void openEvent(OpenEvent openEvent) {
+		// TODO Auto-generated method stub
 
 	}
 
-	
-	public void smokeEvent(SmokeEvent smokeEvent) {
+	public void panelEvent(PanelEvent panelEvent) {
 		// TODO Auto-generated method stub
-
 	}
 
 }
