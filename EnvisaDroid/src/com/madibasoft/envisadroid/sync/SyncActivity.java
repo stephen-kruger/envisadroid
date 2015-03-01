@@ -1,5 +1,10 @@
 package com.madibasoft.envisadroid.sync;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
@@ -9,6 +14,7 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +32,7 @@ import com.madibasoft.envisadroid.util.Util;
 @SuppressLint("DefaultLocale")
 public class SyncActivity extends Activity {
 
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sync);
@@ -40,7 +46,7 @@ public class SyncActivity extends Activity {
 		//		ipAddress.setText(Util.getMACAddress());
 		findViewById(R.id.sendButton).setOnClickListener(
 				new View.OnClickListener() {
-					
+
 					public void onClick(View view) {
 						new AlertDialog.Builder(SyncActivity.this)
 						.setIcon(android.R.drawable.ic_dialog_alert)
@@ -48,7 +54,7 @@ public class SyncActivity extends Activity {
 						.setMessage(R.string.really_send)
 						.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 
-							
+
 							public void onClick(DialogInterface dialog, int which) {
 								SendTask task = new SendTask();
 								if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
@@ -66,7 +72,7 @@ public class SyncActivity extends Activity {
 
 		findViewById(R.id.receiveButton).setOnClickListener(
 				new View.OnClickListener() {
-					
+
 					public void onClick(View view) {
 						new AlertDialog.Builder(SyncActivity.this)
 						.setIcon(android.R.drawable.ic_dialog_alert)
@@ -74,7 +80,7 @@ public class SyncActivity extends Activity {
 						.setMessage(R.string.really_receive)
 						.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 
-							
+
 							public void onClick(DialogInterface dialog, int which) {
 								Log.d(EnvisadroidApplication.LOG,"Starting receieve task1") ;
 								dialog.dismiss();
@@ -94,14 +100,14 @@ public class SyncActivity extends Activity {
 					}
 				});
 	}
-	
+
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.sync, menu);
 		return true;
 	}
 
-	
+
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
@@ -112,7 +118,7 @@ public class SyncActivity extends Activity {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-//			NavUtils.navigateUpFromSameTask(this);
+			//			NavUtils.navigateUpFromSameTask(this);
 			navigateUpTo(this.getParentActivityIntent());
 			return true;
 		}
@@ -129,7 +135,7 @@ public class SyncActivity extends Activity {
 				SyncHelper syncHelper = new SyncHelper(SyncActivity.this,Util.getPreference(SyncActivity.this,SettingsActivity.HOSTNAME,"192.168.1.25"));
 				publishProgress("Collating settings","40");
 				JSONObject zoneData = syncHelper.getSettingsData(SyncActivity.this);
-				
+
 				publishProgress("Storing settings","85");				
 				syncHelper.sendSettings(SyncActivity.this,zoneData);
 				publishProgress("Stored settings","100");	
@@ -165,15 +171,65 @@ public class SyncActivity extends Activity {
 		protected String doInBackground(String... params) {
 			Log.d(EnvisadroidApplication.LOG,"Into receive task") ;
 			try {
-				SyncHelper syncHelper = new SyncHelper(SyncActivity.this,Util.getPreference(SyncActivity.this,SettingsActivity.HOSTNAME,"192.168.1.25"));
+				final SyncHelper syncHelper = new SyncHelper(SyncActivity.this,Util.getPreference(SyncActivity.this,SettingsActivity.HOSTNAME,"192.168.1.25"));
 
 				// now read contents
 				publishProgress("Searching for settings","10");
-				JSONObject zoneData = syncHelper.receiveSettings(SyncActivity.this);
-				publishProgress("Received settings bundle","20");
-				String result = syncHelper.setSettingsData(SyncActivity.this,zoneData);
-				publishProgress("Loaded zones","100");
-				return result;
+				final JSONArray settings = syncHelper.receiveSettings(SyncActivity.this);
+				final JSONObject zoneData;
+				if (settings.length()==1) {
+					// only one setting found, so use it
+					zoneData = settings.getJSONObject(0);
+					publishProgress(SyncActivity.this.getString(R.string.sync_received),"20");
+					String result = syncHelper.setSettingsData(SyncActivity.this,zoneData);
+					publishProgress(SyncActivity.this.getString(R.string.sync_loaded),"100");
+					return result;
+				}
+				else {
+					// multiple settings, let user choose
+					List<String>items = new ArrayList<String>();
+					for (int i = 0; i < settings.length();i++) {
+						JSONObject jo = settings.getJSONObject(i);
+						if (jo.has("1:1")) {
+							if (jo.has("date"))
+								items.add(jo.getString("1:1")+" ("+jo.getString("date")+')');
+							else
+								items.add(jo.getString("1:1")+" (??/??/?? ??:??)");
+						}
+					}
+					AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this);
+					builder.setTitle(R.string.sync_choose)
+					.setItems(items.toArray(new String[items.size()]), new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							try {
+								publishProgress(SyncActivity.this.getString(R.string.sync_received),"20");
+								syncHelper.setSettingsData(SyncActivity.this,settings.getJSONObject(which));
+								publishProgress(SyncActivity.this.getString(R.string.sync_loaded),"100");
+							}
+							catch (JSONException je) {
+								je.printStackTrace();
+								publishProgress(je.getMessage(),"100");
+							}
+						}
+					})
+					.setOnCancelListener(new DialogInterface.OnCancelListener() {
+
+						public void onCancel(DialogInterface dialog) {
+							// in case user aborts by back button
+							publishProgress("Cancelled","100");	
+							dialog.cancel();
+							dialog.dismiss();
+						}
+
+					});
+					Looper.prepare();
+					AlertDialog dialog = builder.create();
+					dialog.show();
+					Looper.loop();
+
+					return "";
+				}
+
 			}
 			catch (Throwable se) {
 				LogActivity.log(SyncActivity.this, "Problem recieving ("+se+")");

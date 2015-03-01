@@ -1,5 +1,9 @@
 package com.madibasoft.envisadroid.sync;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -38,7 +42,7 @@ public class SyncHelper {
 		sendSettingsByMongoLabs(c,zoneData);
 	}
 
-	public JSONObject receiveSettings(Context c) {
+	public JSONArray receiveSettings(Context c) {
 		try {
 			LogActivity.log(c, "Syncing settings for "+host);
 			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host.toLowerCase()+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
@@ -48,12 +52,11 @@ public class SyncHelper {
 			BasicManagedEntity entity = (BasicManagedEntity) response.getEntity();
 			String content = Util.slurp(entity.getContent(),1024);
 			LogActivity.log(c, "Received settings for "+host);
-			// TODO scroll through to find only most recent settings
 			JSONArray settings = new JSONArray(content);
 			if (settings.length()==0)
 				throw new RuntimeException("No settings found for "+host);
 			LogActivity.log(c, "Found "+settings.length()+" settings versions for "+host);
-			return settings.getJSONObject(0);
+			return settings;
 
 		}
 		catch (Throwable e) {
@@ -69,6 +72,11 @@ public class SyncHelper {
 		//	          type: "POST",
 		//	          contentType: "application/json" } );
 		try {
+			DateFormat formatter = DateFormat.getDateTimeInstance(
+                    DateFormat.SHORT, 
+                    DateFormat.SHORT, 
+                    Locale.getDefault());
+			zoneData.put("date", formatter.format(new Date()));
 			LogActivity.log(c, "Syncing settings for "+host);
 			String url = "https://api.mongolab.com/api/1/databases/webhiker/collections/"+host.toLowerCase()+"?apiKey=ZhgXJYOCoR1h4LnU3hWIUgfGgnXcG_Om";
 			HttpClient client = new DefaultHttpClient();
