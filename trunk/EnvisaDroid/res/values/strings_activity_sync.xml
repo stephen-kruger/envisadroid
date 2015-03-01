@@ -7,5 +7,8 @@
     <string name="sync_help">Synchronise your zone name definitions between devices running on this network</string>
     <string name="really_send">Store this devices zone names in the cloud?</string>
     <string name="really_receive">Receive zone names from the cloud? This will overwrite the names on this device</string>
+    <string name="sync_choose">Select one</string>
+    <string name="sync_received">Received settings bundle</string>
+    <string name="sync_loaded">Loaded zones</string>
     
 </resources>
