@@ -63,7 +63,6 @@ public class TPISession extends Session {
 			try {
 				tickPoll();
 			} catch (EnvisaException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -451,7 +450,6 @@ public class TPISession extends Session {
 			try {
 				codeSend(getPasscode());
 			} catch (EnvisaException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;	

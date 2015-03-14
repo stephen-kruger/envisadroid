@@ -78,7 +78,6 @@ public class WebConnection {
 	}
 
 	public void close() {
-		// TODO Auto-generated method stub
 		
 	}
 

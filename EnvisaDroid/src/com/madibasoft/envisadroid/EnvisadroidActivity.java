@@ -562,17 +562,14 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 
 	public void closeEvent(CloseEvent closeEvent) {
 		log("Close :"+closeEvent.toString());		
-		// TODO Auto-generated method stub
 	}
 
 	public void openEvent(OpenEvent openEvent) {
 		log("Open :"+openEvent.toString());				
-		// TODO Auto-generated method stub
 	}
 
 	public void panelEvent(PanelEvent panelEvent) {
 		log("Panel :"+panelEvent.toString());				
-		// TODO Auto-generated method stub		
 	}
 
 	public void smokeEvent(final SmokeEvent smokeEvent) {

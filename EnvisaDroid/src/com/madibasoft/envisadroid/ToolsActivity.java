@@ -265,98 +265,49 @@ public class ToolsActivity extends Activity implements TPIListener {
 		}
 		
 	}
-
-//	
-//	public void zoneEvent(List<ZoneEvent> zones) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-
-
-
 	
 	public void ledEvent(LEDEvent ledEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void partitionEvent(PartitionEvent partitionEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void loginEvent(LoginEvent loginEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void errorEvent(ErrorEvent errorEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void infoEvent(InfoEvent infoEvent) {
-		// TODO Auto-generated method stub
 		
 	}
 
-
-
-	
 	public void chimeEvent(ChimeEvent chimeEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void smokeEvent(SmokeEvent smokeEvent) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 	
 	public void zoneEvent(ZoneEvent ge) {
-		// TODO Auto-generated method stub
 		
 	}
-
-
-
 
 	public void closeEvent(CloseEvent closeEvent) {
-		// TODO Auto-generated method stub
+		
 		
 	}
-
-
-
 
 	public void openEvent(OpenEvent openEvent) {
-		// TODO Auto-generated method stub
-		
+				
 	}
 
-
-
-
 	public void panelEvent(PanelEvent panelEvent) {
-		// TODO Auto-generated method stub
 		
 	}
 
