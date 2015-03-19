@@ -119,7 +119,7 @@ public class ToolsActivity extends Activity implements TPIListener {
 						try {
 							((EnvisadroidApplication)getApplication()).getSession().armStay(1);
 						} 
-						catch (EnvisaException e) {
+						catch (Throwable e) {
 							dialog(ToolsActivity.this,R.string.error,e.getMessage());
 							e.printStackTrace();
 						}

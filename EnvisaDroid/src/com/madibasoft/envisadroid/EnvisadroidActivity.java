@@ -191,9 +191,13 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 
 		});
 
-
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setHomeButtonEnabled(true);
+		try {
+			getActionBar().setDisplayHomeAsUpEnabled(true);
+			getActionBar().setHomeButtonEnabled(true);
+		}
+		catch (Throwable t) {
+			log( "Funky version of android :"+t.getMessage());
+		}
 	}
 
 
@@ -272,8 +276,12 @@ public class EnvisadroidActivity extends Activity implements TPIListener, OnChil
 		});
 
 		// change up icon to show drawer
-		getActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
-
+		try {
+			getActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
+		}
+		catch (Throwable t) {
+			log( "Funky version of android :"+t.getMessage());
+		}
 		return true;
 	}
 
