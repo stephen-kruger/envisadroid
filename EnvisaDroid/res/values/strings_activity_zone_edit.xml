@@ -1,8 +1,0 @@
-<resources>
-
-    <string name="partitionName">Partition</string>
-    <string name="bypassOn">Bypass on</string>
-    <string name="bypassOff">Bypass off</string>
-    <string name="action_cancel">Cancel</string>
-    
-</resources>

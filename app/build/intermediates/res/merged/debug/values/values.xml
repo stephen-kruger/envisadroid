@@ -158,8 +158,8 @@
     <string name="prompt_zone">Zone 1</string>
     <!-- From: file:/C:/workspace/androidstudio/EnvisaDroid/app/src/main/res/values/strings_activity_sync.xml -->
     <eat-comment/>
-    <string name="really_receive">Receive zone names from the cloud? This will overwrite the names on this device</string>
-    <string name="really_send">Store this devices zone names in the cloud?</string>
+    <string name="really_receive">Restore zone names from the cloud? (Overwrite the names on this device)</string>
+    <string name="really_send">Backup zone names in the cloud?</string>
     <!-- From: file:/C:/workspace/androidstudio/EnvisaDroid/app/src/main/res/values/strings_activity_tools.xml -->
     <eat-comment/>
     <string name="reboot">Reboot</string>

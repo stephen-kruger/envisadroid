@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-     <item
-        android:id="@+id/menu_action_clear_log"
-        android:showAsAction="ifRoom|withText" 
-        android:icon="@drawable/navigation_accept"
-        android:title="@string/clear_log"/>
-    
-</menu>

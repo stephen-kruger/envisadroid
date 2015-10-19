@@ -9,7 +9,270 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f97926-bb48-4094-94cd-2010b206398e" name="Default" comment="" />
+    <list default="true" id="79f97926-bb48-4094-94cd-2010b206398e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_android_22.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/effects_android_22.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/maps_android_22.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/usb_android_22.xml" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\.classpath" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\.project" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\EnvisaDroid.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\envisadroid.keystore" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\ic_launcher-web.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\libs\android-support-v13.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\lint.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\promo-small.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\promo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\screen1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\screen2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\screen3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\market\screen4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\proguard-project.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\project.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\collections_view_as_grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\collections_view_as_list.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\green_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\green_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_alarm_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_alarm_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_help.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_keypad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_locked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_nosmoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_reboot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_receive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_report.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_send.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_smoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_stay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_time.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_unlocked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_volume_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_action_volume_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_error.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\ic_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\navigation_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\navigation_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-hdpi\navigation_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\collections_view_as_grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\collections_view_as_list.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\green_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\green_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_alarm_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_alarm_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_help.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_keypad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_locked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_nosmoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_reboot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_receive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_report.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_send.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_smoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_stay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_time.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_unlocked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_volume_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_action_volume_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_error.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\ic_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\log.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\navigation_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-ldpi\navigation_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\collections_view_as_grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\collections_view_as_list.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\green_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\green_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_alarm_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_alarm_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_help.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_keypad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_locked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_nosmoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_reboot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_receive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_report.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_send.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_smoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_stay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_time.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_unlocked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_volume_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_action_volume_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_error.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\ic_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\navigation_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\navigation_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-mdpi\navigation_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\collections_view_as_grid.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\collections_view_as_list.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_alarm_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_alarm_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_help.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_keypad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_locked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_nosmoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_reboot.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_receive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_report.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_send.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_settings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_smoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_stay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_time.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_unlocked.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_volume_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_action_volume_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_error.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\ic_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\navigation_accept.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\navigation_cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xhdpi\navigation_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_alarm_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_alarm_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_nosmoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_receive.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_send.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_smoking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_stay.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_volume_off.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_action_volume_on.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable-xxhdpi\ic_drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable\checkbox_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable\flat_button.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable\gradient.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\drawable\gradient_reverse.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_envisadroid.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_keypad.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_log.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_sync.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_tools.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\activity_zone_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\drawer_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\group_listitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\led_panel.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\log_listitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\switch_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\layout\zoneevent_listitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\menu\activity_log.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\menu\activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\menu\sync.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\menu\tools.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values-sw600dp\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values-sw720dp-land\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\arrays.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_keypad.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_log.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_sync.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_tools.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_activity_zone_edit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_time.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\strings_zonevent_listitem.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\values\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\xml\pref_general.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\xml\pref_headers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\xml\pref_misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\res\xml\pref_security.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\EnvisaHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\EnvisadroidActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\SettingsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\ToolsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\ZoneEditActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\ColloquialDateFormat.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\Connection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\EnvisaException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\Session.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\Command.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\Message.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\TPIConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\TPISession.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\ChimeEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\CloseEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\ErrorEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\GenericEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\InfoEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\LEDEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\LoginEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\OpenEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\PanelEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\PanelModeEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\PartitionEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\SmokeEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\TPIListener.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\tpi\event\ZoneEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\web\HomepageSAX.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\web\WebConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\api\web\WebSession.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\application\EnvisadroidApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\application\EventDataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\application\EventSQLiteHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\keypad\KeypadActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\log\Log.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\log\LogActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\log\LogDataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\log\LogSQLiteHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\log\LogTimer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\sync\SyncActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\sync\SyncHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\ColloquialDateFormat.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\CustomAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\SystemUiHider.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\SystemUiHiderBase.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\SystemUiHiderHoneycomb.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\util\Util.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\zone\ZoneDataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\zone\ZoneExpandableListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\EnvisaDroid\src\com\madibasoft\envisadroid\zone\ZoneSQLiteHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\app\build\intermediates\dex\debug\classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\app\build\intermediates\pre-dexed\debug\android-support-v13-8c4dd1d9fb0a464a6e144a15b1f4bb34cffb9158.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\app\build\outputs\apk\app-debug-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\androidstudio\EnvisaDroid\app\build\outputs\apk\app-debug.apk" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/madibasoft/envisadroid/sync/SyncHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/madibasoft/envisadroid/sync/SyncHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/madibasoft/envisadroid/test/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/madibasoft/envisadroid/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/madibasoft/envisadroid/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/madibasoft/envisadroid/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesandroidTest/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw720dp-land/values-sw720dp-land.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="EnvisaDroid.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -40,7 +303,7 @@
       <file leaf-file-name="SyncHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.722222">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
               <folding />
             </state>
@@ -50,12 +313,9 @@
       <file leaf-file-name="SyncActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9147287">
+            <state vertical-scroll-proportion="-0.6376812">
               <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-              <folding>
-                <element signature="e#1602#1621#0" expanded="true" />
-                <element signature="e#1641#1661#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1066,7 +1326,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\workspace\androidstudio\EnvisaDroid" value="4335818903117" />
+        <entry key="C:\workspace\androidstudio\EnvisaDroid" value="4335831891647" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1414,20 +1674,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EnvisaDroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="EnvisaDroid" />
@@ -1436,8 +1688,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1655,32 +1905,32 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49785638" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912844" sideWeight="0.5021436" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49785638" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912844" sideWeight="0.49785638" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49785638" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22508039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912844" sideWeight="0.49571276" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32912844" sideWeight="0.50428724" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49785638" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49571276" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22508039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.49785638" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1699,11 +1949,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/import-summary.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.192029">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1711,12 +1976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="344" column="42" selection-start-line="344" selection-start-column="42" selection-end-line="344" selection-end-column="42" />
-          <folding>
-            <element signature="e#19777#19778#0" expanded="false" />
-            <element signature="e#19815#19816#0" expanded="false" />
-            <element signature="e#25850#25851#0" expanded="false" />
-            <element signature="e#25885#25886#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1770,7 +2029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.722222">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
           <folding />
         </state>
@@ -1778,12 +2037,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/madibasoft/envisadroid/sync/SyncActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9147287">
+        <state vertical-scroll-proportion="-0.6376812">
           <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding>
-            <element signature="e#1602#1621#0" expanded="true" />
-            <element signature="e#1641#1661#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
