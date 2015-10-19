@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\workspace\androidstudio\EnvisaDroid\app\libs\android-support-v13.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d1581cddcb7a8670146268559e8931d85822d4a0">
+        <dex dex="C:\workspace\androidstudio\EnvisaDroid\app\build\intermediates\pre-dexed\debug\android-support-v13-8c4dd1d9fb0a464a6e144a15b1f4bb34cffb9158.jar" />
+    </item>
+
+</items>

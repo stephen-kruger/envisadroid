@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="time_now">moments ago</string>
+    <string name="time_seconds">{0,number,integer} seconds ago</string>
+    <string name="time_minute">about 1 minute ago</string>
+    <string name="time_minutes">{0,number,integer} minutes ago</string>
+    <string name="time_hour">about 1 hour ago</string>
+    <string name="time_hours">{0,number,integer} hours ago</string>
+    <string name="time_yesterday">yesterday at {0,time,short}</string>
+    <string name="time_days">over {0,number,integer} days ago</string>
+    <string name="time_on">on {0,date}</string>
+    <string name="last_seen_open">Opened</string>
+    <string name="last_seen_closed">Closed</string>
+    
+</resources>

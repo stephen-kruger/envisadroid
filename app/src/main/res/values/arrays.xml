@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+   
+    <string-array name="panel">
+        <item>@string/panel_tpi</item>
+        <item>@string/panel_nontpi</item>
+        </string-array>
+    
+    <string-array name="panel_values">
+        <item>TPI</item>
+        <item>NONTPI</item>
+    </string-array>
+    
+</resources>

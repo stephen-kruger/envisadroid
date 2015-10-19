@@ -1,0 +1,216 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:background="@color/gradient_start"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- The main content view -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/gradient_start"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/gradient_end"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/chimeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:contentDescription="@string/tools"
+                android:enabled="false"
+                android:gravity="center"
+                android:src="@drawable/ic_action_volume_off" />
+
+            <ImageView
+                android:id="@+id/alarmIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:contentDescription="@string/tools"
+                android:enabled="false"
+                android:gravity="center"
+                android:src="@drawable/ic_action_alarm_off" />
+
+            <ImageView
+                android:id="@+id/fireIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:contentDescription="@string/tools"
+                android:enabled="false"
+                android:gravity="center"
+                android:src="@drawable/ic_action_nosmoking" />
+            
+             <TextView
+                android:id="@+id/textLogView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gradient_end"
+                android:clickable="true"
+                android:text="@string/blank"
+                android:paddingStart="3dp"
+                android:paddingLeft="3dp"
+                android:paddingEnd="0dp"
+                android:paddingRight="0dp"
+                android:layout_gravity="end"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/light_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="end"
+            android:background="@color/gradient_start"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/gradient_start"
+                android:orientation="vertical"
+                android:padding="4dp" >
+
+                <RadioButton
+                    android:id="@+id/ledReady"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_ready"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledArmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_armed"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledMem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_mem"
+                    android:layout_gravity="end"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledBypass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_bypass"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledTrouble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_trouble"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledProgram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_program"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledFire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/led_fire"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledBacklight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_backlight"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+
+                <RadioButton
+                    android:id="@+id/ledConnection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:selectAllOnFocus="false"
+                    android:text="@string/led_connection"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/light_text" />
+            </LinearLayout>
+
+            <ExpandableListView
+                android:id="@+id/zoneListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/light_text"
+                android:drawSelectorOnTop="true"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false" >
+            </ExpandableListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- The navigation drawer -->
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/gradient_end"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="0dp" />
+
+</android.support.v4.widget.DrawerLayout><!-- From: file:/C:/workspace/androidstudio/EnvisaDroid/app/src/main/res/layout/activity_envisadroid.xml -->

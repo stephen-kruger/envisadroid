@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="title_activity_sync_edit">Sync zone names</string>
+
+    <string name="sync_send">Send</string>
+    <string name="sync_receive">Receive</string>
+    <string name="sync_help">Synchronise your zone name definitions between devices running on this network</string>
+    <string name="really_send">Backup zone names in the cloud?</string>
+    <string name="really_receive">Restore zone names from the cloud? (Overwrite the names on this device)</string>
+    <string name="sync_choose">Select one</string>
+    <string name="sync_received">Received settings bundle</string>
+    <string name="sync_loaded">Loaded zones</string>
+    
+</resources>
